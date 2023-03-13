@@ -7,9 +7,6 @@ describe('Band tests UI', () => {
     cy.get('h1.band_name').then(($band_name) => {
       expect($band_name.text()).to.eq('Metallica')
     })
-    cy.xpath('//div[@id="band_stats"]//dt[text()="Status:"]/following-sibling::dd[1]').then(($band_status) => {
-      expect($band_status.text()).to.eq('Active')
-    })
   })
   
   it('2. Band status is active', () => {
